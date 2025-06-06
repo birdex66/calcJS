@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            *{
+                font-family: "Inter", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 100;
+                font-style: thin;
+            }
+
+            body{background-color:#373736;}
+
+            .box{
+                display: inline-block;
+                background-color:#212221;
+                margin:auto;
+                height:auto;
+                border-radius:5px;
+            }
+
+            .box #input{
+               margin:20px 2px; 
+               margin-bottom:0;
+            }
+            
+            .box #input h1{
+               background-color:#fff;
+               padding:7px 5px;
+               border-radius:5px;
+               margin:0 10px;
+               text-align:right;
+               font-weight:100;
+            }
+
+
+            .buttons {
+                display: flex;
+                align-items: stretch;
+                gap: 1em;
+            }
+            .R1 {
+                display:flex;
+                list-style-type:none; 
+                align-items:center;  
+                padding:10px;
+                gap: 1em;
+            }
+
+            .R1 li{
+                display:flex;
+                width:40px;
+                height:35px;
+                justify-content:center;
+                text-align:center;
+                align-items:center;
+                background-color:#DCD7D1;
+                border-radius:8px;
+            }
+
+            #line{
+                display:flex; 
+                width:1.1px;
+                background-color:#FFDE59;
+                align-items:stretch;
+                margin: 1.5em 0.2em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div id="input"><h1>PlaceHolder</h1></div>
+            <div class="buttons"> 
+                <div id="numbers">
+                    <ul class="R1">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul> 
+                    <ul class="R1">
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>0</li>
+                    </ul>
+                </div>         
+
+                <!-- <hr style="border-bottom:1px solid black;height:10%;"> -->
+                <div id="line"></div>
+                <div id="functions">
+                    <ul class="R1">
+                        <li>+</li>
+                        <li>-</li>
+                        <li>•</li>
+                        <li style="background-color:#EF9917;font-weight: bold;">DEL</li>
+                        <li style="background-color:#E92F30;font-weight: bold;">AC</li>
+                        <li>x²</li>
+                    </ul> 
+
+                    <ul class="R1">
+                        <li>×</li>
+                        <li>÷</li>
+                        <li style="background-color:#D3C65C;font-weight: bold;">=</li>
+                        <li style="background-color:#E92F30;font-weight: bold;">C</li>
+                        <li>√</li>
+                        <li>^</li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
