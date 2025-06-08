@@ -2,9 +2,9 @@
   "dependencies": {
     "stable": "^0.1.8"
   },
-  "name": "my-electron-app",
+  "name": "calculator",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "devDependencies": {
     "electron": "^36.4.0"
   },

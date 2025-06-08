@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calculator</title>
         <style>
             *{
@@ -58,7 +60,36 @@
                 align-items:center;
                 background-color:#DCD7D1;
                 border-radius:8px;
+                user-select: none;
             }
+
+            .R1 li:hover{background-color:#C4BFB8;}
+            .R1 li:active{background-color:#A09B95;}
+        
+            .R1 .del{
+                background-color:#EF9917;
+                font-weight: bold;
+            }
+
+            .R1 .del:hover{background-color:#D28410}
+            .R1 .del:active{background-color:#AF6F0E;}
+
+
+            .R1 .clear{
+                background-color:#E92F30;
+                font-weight: bold;
+            }
+            
+            .R1 .clear:hover{background-color:#CC2829;}
+            .R1 .clear:active{background-color:#A51F20;}
+
+            .R1 .equal{
+                background-color:#D3C65C;
+                font-weight: bold;
+            }
+
+            .R1 .equal:hover{background-color:#B6AA4E;}
+            .R1 .equal:active{background-color:#90873D;}
 
             #line{
                 display:flex; 
@@ -71,7 +102,7 @@
     </head>
     <body>
         <div class="box">
-            <div id="input"><h1>PlaceHolder</h1></div>
+            <div id="input"><h1>PLACEHOLDER</h1></div>
             <div class="buttons"> 
                 <div id="numbers">
                     <ul class="R1">
@@ -90,28 +121,28 @@
                     </ul>
                 </div>         
 
-                <!-- <hr style="border-bottom:1px solid black;height:10%;"> -->
                 <div id="line"></div>
                 <div id="functions">
                     <ul class="R1">
                         <li>+</li>
                         <li>-</li>
                         <li>•</li>
-                        <li style="background-color:#EF9917;font-weight: bold;">DEL</li>
-                        <li style="background-color:#E92F30;font-weight: bold;">AC</li>
+                        <li class="del">DEL</li>
+                        <li class="clear">AC</li>
                         <li>x²</li>
                     </ul> 
 
                     <ul class="R1">
                         <li>×</li>
                         <li>÷</li>
-                        <li style="background-color:#D3C65C;font-weight: bold;">=</li>
-                        <li style="background-color:#E92F30;font-weight: bold;">C</li>
+                        <li class="equal">=</li>
+                        <li class="clear">C</li>
                         <li>√</li>
                         <li>^</li>
                     </ul> 
                 </div>
             </div>
         </div>
+        <script src="functions.js"></script>
     </body>
 </html>
