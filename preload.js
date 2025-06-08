@@ -4,7 +4,9 @@ const func = require(path.join(__dirname, 'functions.js'));
 
 contextBridge.exposeInMainWorld('myAPI', {
   update: func.update,
+  upFunc: func.upFunc,
   overflow: func.overflow,
-  testHello: func.testHello
+  testHello: func.testHello,
+  isFloat: func.isFloat
 });
 

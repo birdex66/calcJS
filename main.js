@@ -6,7 +6,7 @@ console.log("i like turtles");
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 680,
+    width: 715,
     height: 275,
     webPreferences:{
         preload: preloadPath,

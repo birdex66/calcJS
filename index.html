@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calculator</title>
         <style>
-*{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: thin;
-}
+            *{
+                font-family: "Inter", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 100;
+                font-style: thin;
+            }
 
             body{background-color:#373736;}
 
@@ -24,18 +24,35 @@
             }
 
             .box #input{
-                width: 655px;
+                display:flex;
                 margin:20px 2px; 
                 margin-bottom:0;
             }
 
-            .box #input h1{
-                background-color:#fff;
-                padding:7px 5px;
-                border-radius:5px;
+            .box #input h1 {
+                margin: 5px 10px;
+                color: black;
                 margin:0 10px;
                 text-align:right;
                 font-weight:100;
+                align-self:flex-end;
+
+            }
+
+            .box #input #op{
+                background-color:#D3C65C;
+                padding:7px 5px;
+                border-radius:5px;
+                width:55px;
+                text-align:center;
+            }
+
+            .box #input #in{
+                background-color:#fff;
+                padding:7px 5px;
+                border-radius:5px;
+                width: 590px;
+                margin-left:0;
             }
 
 
@@ -43,6 +60,7 @@
                 display: flex;
                 align-items: stretch;
                 gap: 1em;
+                padding:0 10px 0 20px;
             }
             .R1 {
                 display:flex;
@@ -103,7 +121,10 @@
     </head>
     <body>
         <div class="box">
-            <div id="input"><h1>PLACEHOLDER</h1></div>
+            <div id="input">
+                <h1 id="op">?</h1>
+                <h1 id="in">PLACEHOLDER</h1>
+            </div>
             <div class="buttons"> 
                 <div id="numbers">
                     <ul class="R1">
@@ -128,7 +149,7 @@
                         <li id="add">+</li>
                         <li id="subtract">-</li>
                         <li id="decimal">•</li>
-                        <li class="del" id="delete">DEL</li>
+                        <li class="del" id="delete">⌫ </li>
                         <li class="clr" id="allClear">AC</li>
                         <li id="square">x²</li>
                     </ul> 
@@ -139,7 +160,7 @@
                         <li class="eq" id="equal">=</li>
                         <li class="clr" id="clear">C</li>
                         <li id="squareRoot">√</li>
-                        <li id="power">^</li>
+                        <li id="reciprocal">⅟x</li>
                     </ul> 
                 </div>
             </div>
