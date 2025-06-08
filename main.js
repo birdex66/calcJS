@@ -1,10 +1,20 @@
+const path = require(`path`);
 const { app, BrowserWindow } = require('electron/main')
+const preloadPath = path.join(__dirname, 'preload.js');
+console.log("Loading preload from:", preloadPath);
+console.log("i like turtles");
 
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 680,
-    height: 275
-  })
+    height: 275,
+    webPreferences:{
+        preload: preloadPath,
+        sandbox: false,
+        contextIsolation: true,
+        nodeIntegration: false
+    }
+  });
 
   win.loadFile('index.html')
 }

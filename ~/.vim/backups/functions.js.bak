@@ -1,3 +1,22 @@
-let ans = document.getElemementById(`input`);
-ans.value = 0;
-console.log(`hi`);
+function testHello(){
+   console.log(`hi`); 
+}
+
+function update(input) {
+  const h1 = document.querySelector(`#input h1`);
+  if (h1) {h1.textContent = input;
+  } else {console.error(`h1 not found inside #input`);}
+}
+
+function overflow() {
+  const c = document.querySelector(`#input`);
+  const e = document.querySelector(`#input h1`);
+  return e.scrollHeight > c.clientHeight || e.scrollWidth > c.clientWidth-20px;
+
+}
+
+module.exports = {
+  testHello,
+  update,
+  overflow
+};

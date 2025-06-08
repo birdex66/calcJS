@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calculator</title>
         <style>
-            *{
-                font-family: "Inter", sans-serif;
-                font-optical-sizing: auto;
-                font-weight: 100;
-                font-style: thin;
-            }
+*{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: thin;
+}
 
             body{background-color:#373736;}
 
@@ -24,17 +24,18 @@
             }
 
             .box #input{
-               margin:20px 2px; 
-               margin-bottom:0;
+                width: 645px;
+                margin:20px 2px; 
+                margin-bottom:0;
             }
-            
+
             .box #input h1{
-               background-color:#fff;
-               padding:7px 5px;
-               border-radius:5px;
-               margin:0 10px;
-               text-align:right;
-               font-weight:100;
+                background-color:#fff;
+                padding:7px 5px;
+                border-radius:5px;
+                margin:0 10px;
+                text-align:right;
+                font-weight:100;
             }
 
 
@@ -65,7 +66,7 @@
 
             .R1 li:hover{background-color:#C4BFB8;}
             .R1 li:active{background-color:#A09B95;}
-        
+
             .R1 .del{
                 background-color:#EF9917;
                 font-weight: bold;
@@ -75,21 +76,21 @@
             .R1 .del:active{background-color:#AF6F0E;}
 
 
-            .R1 .clear{
+            .R1 .clr{
                 background-color:#E92F30;
                 font-weight: bold;
             }
-            
-            .R1 .clear:hover{background-color:#CC2829;}
-            .R1 .clear:active{background-color:#A51F20;}
 
-            .R1 .equal{
+            .R1 .clr:hover{background-color:#CC2829;}
+            .R1 .clr:active{background-color:#A51F20;}
+
+            .R1 .eq{
                 background-color:#D3C65C;
                 font-weight: bold;
             }
 
-            .R1 .equal:hover{background-color:#B6AA4E;}
-            .R1 .equal:active{background-color:#90873D;}
+            .R1 .eq:hover{background-color:#B6AA4E;}
+            .R1 .eq:active{background-color:#90873D;}
 
             #line{
                 display:flex; 
@@ -121,29 +122,28 @@
                     </ul>
                 </div>         
 
-                <!-- <hr style="border-bottom:1px solid black;height:10%;"> -->
                 <div id="line"></div>
                 <div id="functions">
                     <ul class="R1">
-                        <li>+</li>
-                        <li>-</li>
-                        <li>•</li>
-                        <li class="del">DEL</li>
-                        <li class="clear">AC</li>
-                        <li>x²</li>
+                        <li id="add">+</li>
+                        <li id="subtract">-</li>
+                        <li id="decimal">•</li>
+                        <li class="del" id="delete">DEL</li>
+                        <li class="clr" id="allClear">AC</li>
+                        <li id="square">x²</li>
                     </ul> 
 
                     <ul class="R1">
-                        <li>×</li>
-                        <li>÷</li>
-                        <li class="equal">=</li>
-                        <li class="clear">C</li>
-                        <li>√</li>
-                        <li>^</li>
+                        <li id="multiply">×</li>
+                        <li id="divide">÷</li>
+                        <li class="eq" id="equal">=</li>
+                        <li class="clr" id="clear">C</li>
+                        <li id="squareRoot">√</li>
+                        <li id="power">^</li>
                     </ul> 
                 </div>
             </div>
         </div>
-        <script src="functions.js"></script>
+        <script src="renderer.js"></script>
     </body>
 </html>
